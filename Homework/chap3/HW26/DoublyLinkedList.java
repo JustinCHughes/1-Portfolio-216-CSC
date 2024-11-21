@@ -1,8 +1,9 @@
-package Homework.chap3.HW8;
+package Homework.chap3.HW26;
 
 public class DoublyLinkedList {
   private Node head;
   private Node tail;
+  private int size;
 
   public DoublyLinkedList()
   {
@@ -11,6 +12,7 @@ public class DoublyLinkedList {
 
     this.head = sentryHeadNode;
     this.tail = sentryTailNode;
+    this.size = 0;
   }
 
   // Function to add Chainlink to the end of the linked list
@@ -31,6 +33,7 @@ public class DoublyLinkedList {
       newNode.prev.next = newNode;
       this.tail.prev = newNode;
     }
+    this.size += 1;
   }
 
   // Retrieves the data at a given linked list index
@@ -65,5 +68,10 @@ public class DoublyLinkedList {
   public Node getTail()
   {
     return this.tail;
+  }
+
+  public int getSize()
+  {
+    return this.size;
   }
 }

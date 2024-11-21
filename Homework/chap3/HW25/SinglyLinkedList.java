@@ -1,35 +1,32 @@
-package Homework.chap3.HW8;
+package Homework.chap3.HW25;
 
-public class DoublyLinkedList {
+public class SinglyLinkedList {
   private Node head;
   private Node tail;
+  private int size;
 
-  public DoublyLinkedList()
+  public SinglyLinkedList()
   {
-    Node sentryHeadNode = new Node();
-    Node sentryTailNode = new Node();
-
-    this.head = sentryHeadNode;
-    this.tail = sentryTailNode;
+    this.head = null;
+    this.tail = null;
+    this.size = 0;
   }
 
   // Function to add Chainlink to the end of the linked list
   public void append(String data)
   {
     Node newNode = new Node(data);
-    if(this.head.next == null)
+    if (head == null)
     {
-      this.head.next = newNode;
-      this.tail.prev = newNode;
-      newNode.prev = this.head;
-      newNode.next = this.tail;
+      this.head = newNode;
+      this.tail = newNode;
+      this.size = 1;
     }
     else
     {
-      newNode.prev = this.tail.prev;
-      newNode.next = this.tail;
-      newNode.prev.next = newNode;
-      this.tail.prev = newNode;
+      this.tail.next = newNode;
+      this.tail = newNode;
+      this.size++;
     }
   }
 
@@ -41,10 +38,10 @@ public class DoublyLinkedList {
       return null;
     }
     
-    Node current = head.next;
+    Node current = head;
     int count = 0;
 
-    while(current != this.tail)
+    while(current != null)
     {
       if(count == i)
       {
@@ -65,5 +62,10 @@ public class DoublyLinkedList {
   public Node getTail()
   {
     return this.tail;
+  }
+
+  public int getSize()
+  {
+    return this.size;
   }
 }

@@ -152,8 +152,8 @@ public class DoublyLinkedList {
       Node forwardNode = this.tail.prev;
       Node back = this.tail.prev;
       int i = 0;
-      // Continue looking for node as long as i is less than size / 2
-      while(i < this.size / 2)
+      // Continue looking for node as long as i is less than size / 2 + 1
+      while(i < (this.size / 2) + 1)
       {
         // We know it is not the first node because it did not trigger
         // the previous if statement so start at current.next

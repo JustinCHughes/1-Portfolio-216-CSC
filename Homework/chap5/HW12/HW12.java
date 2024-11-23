@@ -2,6 +2,10 @@
 // uniqueness problem, which runs in time that is at most O(n^2) in
 // the worst case without using sorting.
 
+// I already wrote the code, but I realized after the fact that I likely could
+// have just traversed the linkedlist and added it to a HashSet then returned
+// false if it ever failed to add. Hindsight and all that
+
 // Reference code below for context
 // 1. Checks if position 1 is equal to last element and is position 1 and 2
 //    are equal. If it has reached this point without triggering a false

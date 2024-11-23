@@ -60,21 +60,6 @@ public class RecursiveLinkedList {
     }
   }
 
-  // Kind of like search, but instead of looking for a value, you
-  // presumeably know what entry your data is in and want to return a
-  // specific node's data
-  public int getData(int i)
-  {
-    if(i == 0)
-    {
-      return this.data;
-    }
-    else
-    {
-      return this.next.getData(i - 1);
-    }
-  }
-
   // Prints current data. Checks if this.next exists. If does not, returns.
   // Otherwise, continues down the linked list printing
   public void print()

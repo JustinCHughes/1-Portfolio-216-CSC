@@ -7,7 +7,9 @@
 // 3. To clarify, we are starting from num.length()-1 so we are starting
 //    from the smaller digit place. I resursively call so current value
 //    is added to the next digit to the LEFT * 10. Multiplying by 10 before
-//    adding takes care of having any number place issues.
+//    adding takes care of having any number place issues. The input for the
+//    new call will use a subtring of 0 to num.length() - 1.
+// 4. Once we hit 0 length, the we turn 0.
 
 package Homework.chap5.HW8;
 

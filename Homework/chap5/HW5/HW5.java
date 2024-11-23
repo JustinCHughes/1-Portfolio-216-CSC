@@ -3,12 +3,15 @@
 
 
 // Intial Call
+// Reverse Array then call function again
 //   |
 //   +----> [6,3,6,2,4]
 // First recursive call
+// Reverse Array then call function again
 //           |
 //           +----> [6,2,6,3,4]
 // Third recursive call
+// Reverse Array then call function again
 //                  |
 //                  +----> [6,2,6,3,4]
 // Final recursive call

@@ -20,7 +20,7 @@ public class HW1 {
     int[] t1 = {0, 1, 2, 3, 4, 5};
     System.out.println("Answer at end should be 5: " + max(t1, t1.length-1));
 
-    int[] t2 = {21, 0, 1, 2, 3, 4, 5};
+    int[] t2 = {21, 0, 1, 45, 3, 4, 5};
     System.out.println("Answer at front should be 21: " + max(t2, t2.length-1));
 
     int[] t3 = new int[4];
@@ -40,10 +40,11 @@ public class HW1 {
     {
       return intArr[position];
     }
-    if(position < 1)
+    int returned = max(intArr, position -1);
+    if(returned > intArr[position])
     {
-      return intArr[position];
+      return returned;
     }
-    return Math.max(intArr[position], max(intArr, position - 1));
+    return intArr[position];
   }
 }

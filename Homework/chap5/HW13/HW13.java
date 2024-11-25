@@ -28,17 +28,11 @@ public class HW13 {
     {
       return 0;
     }
-    if(n < 0)
+    if((n < 0 && m < 0) || (n < 0 && m > 0))
     {
       n = n - n - n;
+      m = m - m - m;
     }
-    if(n == 1)
-    {
-      return m;
-    }
-    else
-    {
-      return m + fakeMultiply(m, n - 1);
-    }
+    return m + fakeMultiply(m, n - 1);
   }
 }
